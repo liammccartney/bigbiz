@@ -19,9 +19,7 @@ export class JInputComponent extends JuicyValueAccessor<number> {
     }
 
     effect(() => {
-      console.log('effecting', this.internalValue());
       if ((this.internalValue() ?? '') === (this.value ?? '')) {
-        console.log('nothing to change');
         return;
       }
       this.valueChanged(this.internalValue());
@@ -30,16 +28,13 @@ export class JInputComponent extends JuicyValueAccessor<number> {
 
   override writeValue(value: number | null): void {
     const safeValue = value === null || Number.isFinite(value) ? value : 0;
-    console.log('writing', value, safeValue);
     super.writeValue(safeValue);
     this.internalValue.set(safeValue);
   }
 
   override valueChanged(value: number | null): void {
-    console.log('changing', value);
     this.internalValue.set(value);
     if (Number.isFinite(this.value) && this.internalValue() === this.value) return;
-
     super.valueChanged(value);
   }
 

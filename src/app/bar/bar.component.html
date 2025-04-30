@@ -1,8 +1,10 @@
 <form [formGroup]="form">
-<pre>Form Control Value: {{ form.controls.qtyInput.value }}</pre>
+  <pre>Form Control Value: {{ form.controls.qtyInput.value }}</pre>
   <input type="number" formControlName="qtyInput" />
-<pre>Juicy Form Control Value: {{ form.controls.qtyJuicy.value }}</pre>
+  <hr />
+  <pre>Juicy Form Control Value: {{ form.controls.qtyJuicy.value }}</pre>
   <app-j-input formControlName="qtyJuicy" />
-<pre>Old Juicy Form Control Value: {{ form.controls.qtyJuicy.value }}</pre>
+  <hr />
+  <pre>Old Juicy Form Control Value: {{ form.controls.qtyOldJuicy.value }}</pre>
   <app-old-j-input formControlName="qtyOldJuicy" />
 </form>
