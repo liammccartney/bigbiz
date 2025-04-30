@@ -1,6 +1,6 @@
 import { Component, effect, Optional, Self, signal } from '@angular/core';
 import { FormsModule, NgControl, ReactiveFormsModule } from '@angular/forms';
-import { JuicyValueAccessor } from './j-value-accessor';
+import { JuicyValueAccessor } from '../j-value-accessor';
 import { CommonModule } from '@angular/common';
 
 @Component({
