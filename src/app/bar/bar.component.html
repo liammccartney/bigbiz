@@ -1,0 +1,6 @@
+<form [formGroup]="form">
+<pre>Form Control Value: {{ form.controls.qtyInput.value }}</pre>
+  <input type="number" formControlName="qtyInput" />
+<pre>Juicy Form Control Value: {{ form.controls.qtyJuicy.value }}</pre>
+  <app-j-input formControlName="qtyJuicy" />
+</form>
